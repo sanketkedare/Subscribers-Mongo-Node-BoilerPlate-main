@@ -11,7 +11,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Overview](#overview)
+- [Description](#description)
 - [Routes](#routes)
 
 
@@ -27,19 +27,14 @@ A web service has been developed using the popular JavaScript framework Node.js,
 
 ## Installation
 
-1. Clone the repository:
+➡️ Clone the repository:
 
     ```
-    git clone https://github.com/your-username/your-repo.git
+    git clone git@github.com:sanketkedare/Subscribers-Mongo-Node-BoilerPlate-main.git
     ```
 
-2. Navigate to the project folder:
 
-    ```
-    cd your-repo
-    ```
-
-3. Install dependencies:
+➡️ Install dependencies:
 
     ```
     npm install
@@ -49,7 +44,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 
 
 
-## Overview:
+## Description:
 
 
 
@@ -57,7 +52,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 
 
 
-**1. Source Code Folder:**
+**♦️  Source Code Folder:**
 *The "src" folder contains essential elements for the application's functionality.*
 
 - Controllers: "SubscriberRoutes.js" manages routes for "/subscriberRoutes."
@@ -68,7 +63,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 - Main File: "index.js" serves as the primary execution file.
 
 
-**2. Project Configuration:**
+**♦️ Project Configuration:**
 *The project directory encompasses key files and folders.*
 
 - Node Modules: "node_modules" stores project dependencies.
@@ -78,7 +73,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 - Documentation: "README.md" provides additional project information.
 
 
-**3. Functional Components:**
+**♦️ Functional Components:**
 *The project includes distinct modules for various purposes.*
 
 - Routing Management: "SubscriberRoutes.js" handles routes for subscriber-related functionalities.
