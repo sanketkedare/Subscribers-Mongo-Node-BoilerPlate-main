@@ -2,18 +2,18 @@ const express = require("express");
 const app = express();
 const SubscriberRoute = require("./Controllers/SubscriberRoutes");
 
-//Cheacking
-// const path = require("path");
-// const indexPath = path.join(__dirname, "../src/Client/index.html");
-
-app.use("/subscribers", SubscriberRoute); 
-
-// app.get("/", (req, res) => {
-//   res.sendFile(indexPath);})
-
 app.get("/", (req, res) => {
-  res.status(200).json({"massage":"you have entered wrong url"});})
+  try {
+    setTimeout(() => {
+      res.status(200).send("Success");
+    }, 500);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send("Error");
+  }
+});
 
+app.use("/subscribers", SubscriberRoute);
 
 app.get("*", (req, res) => {
   console.log(req.params);

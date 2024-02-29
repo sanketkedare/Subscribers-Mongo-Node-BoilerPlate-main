@@ -11,7 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 
-
 // Connect to the DATABASE
 connectToDatabase() // Removed code redundancy by imorting the function below
 

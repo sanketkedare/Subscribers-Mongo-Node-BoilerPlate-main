@@ -3,19 +3,34 @@ const subscriberModel = require("./models/subscribers");
 const data = require("./data");
 require("dotenv").config();
 
-const connectToDatabase = () => {
-  mongoose
-    .connect(process.env.DATABASE_URL, {
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    })
-    .then(() => {refreshAll() ; return true})
-    .catch((err) => console.error("Error connecting to Database", err));
+    });
+
+    console.log("Connected to the database");
+
+    await refreshAll();
+
+    console.log("Database refreshed successfully");
+  } catch (error) {
+    console.error("Error connecting to Database", error);
+    throw error;
+  }
 };
 
 const refreshAll = async () => {
-  await subscriberModel.deleteMany({});
-  await subscriberModel.insertMany(data);
+  try {
+    await subscriberModel.deleteMany({});
+    await subscriberModel.insertMany(data);
+
+    console.log("Data refreshed successfully");
+  } catch (error) {
+    console.error("Error refreshing data", error);
+    throw error; // Rethrow the error to handle it at the caller level if needed
+  }
 };
 
 module.exports = connectToDatabase;

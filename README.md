@@ -13,6 +13,7 @@ A web service has been developed using the popular JavaScript framework Node.js,
 - [Installation](#installation)
 - [Description](#description)
 - [Routes](#routes)
+- [Mocha-Report](#mocha-report)
 
 
 
@@ -89,6 +90,11 @@ A web service has been developed using the popular JavaScript framework Node.js,
 - "/subscribers"      : Getting All Subscribers
 - "/subscribers/name" : Getting Subscribers by Name
 - "/subscribers/:id"  : Getting Subscribers by ID
+
+
+
+## Mocha-Report
+
 
 
 © Sanket Kedare
