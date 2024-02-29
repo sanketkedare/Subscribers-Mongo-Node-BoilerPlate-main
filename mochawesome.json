@@ -1,0 +1,7 @@
+{
+    "reportDir": "mochawesome-report",
+    "reportTitle": "My Test Report",
+    "reportFilename": "my-test-report",
+    "autoOpen": true
+  }
+  
