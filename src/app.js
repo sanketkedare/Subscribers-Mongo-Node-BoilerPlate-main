@@ -5,7 +5,7 @@ const SubscriberRoute = require("./Controllers/SubscriberRoutes");
 app.get("/", (req, res) => {
   try {
     setTimeout(() => {
-      res.status(200).send("Success");
+      res.status(200).json({"Msssage": "To get information about subscribers visit '/subscribers' "});
     }, 500);
   } catch (error) {
     console.error(error);
