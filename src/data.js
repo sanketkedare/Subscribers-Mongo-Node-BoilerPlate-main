@@ -1,3 +1,5 @@
+// Dummy data of youtube subscribers
+
 const data = [
     {
       "name": "Jeread Krus",

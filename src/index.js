@@ -1,10 +1,22 @@
+// Entry Point for the application
+
+
+// Configuration for the server
 const express = require('express')
-const app = require('./app.js')
-const connectToDatabase = require('./createDatabase.js')
+const app = require('./app.js')     
+
+
+// Connecting to the database here by importing function
+const connectToDatabase = require('./createDatabase.js') 
+
+
+// Confugration for environment variables 
 require("dotenv").config();
 
 
-const port = process.env.PORT
+// Server is listening on port which defined in "environment variables" or "3001"
+const port = process.env.PORT || 3001
+
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json())
@@ -12,7 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 // Connect to the DATABASE
-connectToDatabase() // Removed code redundancy by imorting the function below
+// Removed code redundancy by imorting the function below
+connectToDatabase() 
 
 
 // Start Server
